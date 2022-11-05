@@ -78,7 +78,7 @@ export default function App() {
             keyExtractor={(item) => item.value}
           />
         </View>
-        <Modal />
+        <Modal isVisible={modalVisible} />
       </View>
       <View></View>
     </View>
