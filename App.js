@@ -12,13 +12,15 @@ import {
 } from "react-native";
 import { useState } from "react";
 import Modal from "./componentes/modal";
+import Header from "./componentes/header";
+import StartScreens from "../screens/startscreens";
 
 export default function App() {
   const [textItem, setTextItem] = useState("");
 
   const [itemList, setItemList] = useState([]);
 
-  const [modaVisible, setModaVisible] = useState([false]);
+  const [, setModaVisible] = useState([false]);
 
   const [itemSelected, setItemSelected] = useState([]);
 
@@ -62,6 +64,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Header />
       <Text>shopping list </Text>
       <TextInput
         placeholder="Agregar item a la lista"
@@ -79,6 +82,7 @@ export default function App() {
           />
         </View>
         <Modal isVisible={modalVisible} />
+        <StartScreens />
       </View>
       <View></View>
     </View>
